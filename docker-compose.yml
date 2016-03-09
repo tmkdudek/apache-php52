@@ -13,11 +13,9 @@ services:
       - 3306
 
   web:
-    image: tommylau/php-5.2
+    build: ./docker/apache
     ports:
       - 8080:80
     volumes:
       - ./:/var/www/html
-    links:
-      - mysql
 
